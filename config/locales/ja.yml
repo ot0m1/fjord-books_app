@@ -1,5 +1,9 @@
 ---
 ja:
+  Sign up: サインアップ
+  Login: ログイン
+  Edit profile: プロフィールを編集
+  Logout: ログアウト
   activerecord:
     errors:
       messages:
