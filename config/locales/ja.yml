@@ -3,6 +3,8 @@ ja:
   Sign up: アカウント作成
   Login: ログイン
   Edit profile: プロフィールを編集
+  User list: ユーザー一覧
+  User details: ユーザー詳細
   Edit User: プロフィール編集
   Logout: ログアウト
   postal_code: 郵便番号
@@ -10,15 +12,24 @@ ja:
   Update: 更新
   Back: 戻る
   self_introduction: 自己紹介文
-  leave blank if you don't want to change it: 変更しない場合は空白にしてください。
+  leave blank if you don't want to change it: 変更しない場合は空白にしてください
   characters minimum: 文字以上
-  we need your current password to confirm your changes: 変更するためには、現在のパスワードが必要です。
+  we need your current password to confirm your changes: 変更するためには、現在のパスワードが必要です
   Cancel my account: アカウント削除
   Unhappy?: お気に召しませんか？
   Are you sure?: 本当にいいですか？
   Log in: ログイン
   Forgot your password?: パスワードを忘れましたか？
   Currently waiting confirmation for: 現在認証待ちです
+  Currently logged in user: 現在ログイン中のユーザー
+  books: 本
+  details: 詳細
+  Send me reset password instructions: パスワードリセットを送信する
+  Change your password: パスワード変更
+  Change my password: パスワード変更
+  New password: 新しいパスワード
+  Confirm new password: 新しいパスワードの確認
+  You need to log in first: 最初にログインが必要です
   activerecord:
     errors:
       messages:

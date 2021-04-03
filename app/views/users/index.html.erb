@@ -10,7 +10,7 @@
       <th><%= User.human_attribute_name(:postal_code) %></th>
       <th><%= User.human_attribute_name(:address) %></th>
       <th><%= User.human_attribute_name(:self_introduction) %></th>
-      <th colspan="2"></th>
+      <th colspan='2'></th>
     </tr>
   </thead>
 
@@ -22,9 +22,9 @@
         <td><%= user.postal_code %></td>
         <td><%= user.address.nil? ? user.address : user.address.truncate(20, omission: '…') %></td>
         <td><%= user.self_introduction.nil? ? user.self_introduction : user.self_introduction.truncate(24, omission: '…') %></td>
-        <td><%= link_to '詳細', "/users/show/#{user.id}" %></td>
+        <td><%= link_to t('details'), "/users/show/#{user.id}" %></td>
         <% if current_user.id == user.id %>
-          <td><%= link_to 'プロフィールを編集', edit_user_registration_path, class: 'navbar-link' %></td>
+          <td><%= link_to t('Edit profile'), edit_user_registration_path, class: 'navbar-link' %></td>
         <% end %>
       </tr>
     <% end %>

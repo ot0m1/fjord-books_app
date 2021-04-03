@@ -1,4 +1,6 @@
-<h2>ユーザー詳細</h2>
+<p id='notice'><%= notice %></p>
+
+<h2><h2><%= t('User details') %></h2>
 
 <h3><%= User.human_attribute_name(:id) %></h3>
 <td><%= @user.id %></td>
@@ -11,4 +13,4 @@
 <h3><%= User.human_attribute_name(:self_introduction) %></h3>
 <td><%= @user.self_introduction %></td>
 
-<p><%= link_to "戻る", :back %></p>
+<p><%= link_to t('Back'), :back %></p>
