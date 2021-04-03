@@ -1,0 +1,14 @@
+<h2>ユーザー詳細</h2>
+
+<h3><%= User.human_attribute_name(:id) %></h3>
+<td><%= @user.id %></td>
+<h3><%= User.human_attribute_name(:email) %></h3>
+<td><%= @user.email %></td>
+<h3><%= User.human_attribute_name(:postal_code) %></h3>
+<td><%= @user.postal_code %></td>
+<h3><%= User.human_attribute_name(:address) %></h3>
+<td><%= @user.address %></td>
+<h3><%= User.human_attribute_name(:self_introduction) %></h3>
+<td><%= @user.self_introduction %></td>
+
+<p><%= link_to "戻る", :back %></p>

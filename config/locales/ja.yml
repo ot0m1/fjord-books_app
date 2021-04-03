@@ -1,9 +1,24 @@
 ---
 ja:
-  Sign up: サインアップ
+  Sign up: アカウント作成
   Login: ログイン
   Edit profile: プロフィールを編集
+  Edit User: プロフィール編集
   Logout: ログアウト
+  postal_code: 郵便番号
+  address: 住所
+  Update: 更新
+  Back: 戻る
+  self_introduction: 自己紹介文
+  leave blank if you don't want to change it: 変更しない場合は空白にしてください。
+  characters minimum: 文字以上
+  we need your current password to confirm your changes: 変更するためには、現在のパスワードが必要です。
+  Cancel my account: アカウント削除
+  Unhappy?: お気に召しませんか？
+  Are you sure?: 本当にいいですか？
+  Log in: ログイン
+  Forgot your password?: パスワードを忘れましたか？
+  Currently waiting confirmation for: 現在認証待ちです
   activerecord:
     errors:
       messages:
