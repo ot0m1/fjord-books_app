@@ -7,7 +7,7 @@ class BooksController < ApplicationController
   # GET /books.json
   def index
     @books = Book.order(:id).page(params[:page])
-    redirect_to '/users/sign_in', notice: t('You need to log in first') unless user_signed_in?
+    redirect_to '/users/sign_in' unless user_signed_in?
   end
 
   # GET /books/1

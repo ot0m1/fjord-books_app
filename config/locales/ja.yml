@@ -24,12 +24,18 @@ ja:
   Currently logged in user: 現在ログイン中のユーザー
   books: 本
   details: 詳細
+  Hello: こんにちわ
   Send me reset password instructions: パスワードリセットを送信する
   Change your password: パスワード変更
   Change my password: パスワード変更
   New password: 新しいパスワード
   Confirm new password: 新しいパスワードの確認
   You need to log in first: 最初にログインが必要です
+  You Can Do This Through The Link Below:  以下のリンクから変更することができます。
+  Someone has requested a link to change your password. You can do this through the link below: パスワードを変更するためのリンクがリクエストされました。以下のリンクから変更することができます。
+  You can do this through the link below: 以下のリンクから変更することができます。
+  If you didn't request this, please ignore this email: 心当たりのない方は、このメールを無視してください。
+  Your password won't change until you access the link above and create a new one: パスワードは、上記のリンクにアクセスして新しいパスワードを作成するまで変更されません。
   activerecord:
     errors:
       messages:
