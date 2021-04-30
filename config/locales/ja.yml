@@ -1,5 +1,6 @@
 ---
 ja:
+  logged_in: "ログインしました。"
   activerecord:
     errors:
       messages:

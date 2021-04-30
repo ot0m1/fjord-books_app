@@ -10,20 +10,11 @@ class User < ApplicationRecord
   def self.find_or_create_for_oauth(auth)
     find_or_create_by!(email: auth.info.email) do |user|
       user.provider = auth.provider
-      user.uid = auth.uid
-      user.uname = auth.info.name
+      user.id = auth.uid
+      user.name = auth.info.name
       user.email = auth.info.email
       password = Devise.friendly_token[0..5]
-      logger.debug password
       user.password = password
-    end
-  end
-
-  def self.new_with_session(params, session)
-    if user_attributes = session['devise.user_attributes']
-      new(user_attributes) { |user| user.attributes = params }
-    else
-      super
     end
   end
 end
