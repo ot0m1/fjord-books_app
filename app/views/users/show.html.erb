@@ -25,6 +25,15 @@
   <%= @user.self_introduction %>
 </p>
 
+<p>
+  <strong><%= User.human_attribute_name(:icon) %>:</strong><br>
+  <% if @user.icon.attached? %>
+    <%= image_tag @user.icon.variant(resize_to_fill: [120, 120]) %>
+  <% else %>
+    &nbsp;
+  <% end %>
+</p>
+
 <% if current_user == @user %>
   <%= link_to t('views.common.edit'), edit_user_registration_path %> |
 <% end %>
