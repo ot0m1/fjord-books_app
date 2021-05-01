@@ -327,7 +327,7 @@ DEPENDENCIES
   kaminari
   letter_opener_web
   listen (~> 3.3)
-  omniauth (~> 1.9.1)
+  omniauth
   omniauth-github
   puma (~> 5.0)
   rack-mini-profiler (~> 2.0)
