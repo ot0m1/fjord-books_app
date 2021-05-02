@@ -8,7 +8,7 @@ class User < ApplicationRecord
          :omniauthable, omniauth_providers: [:github]
 
   def self.find_or_create_for_oauth(auth)
-    find_or_create_by!(email: auth.info.email) do |user|
+    find_or_create_by(email: auth.info.email) do |user|
       user.provider = auth.provider
       user.id = auth.uid
       user.name = auth.info.name

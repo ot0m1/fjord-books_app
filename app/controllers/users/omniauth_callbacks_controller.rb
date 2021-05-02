@@ -29,8 +29,6 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
   def callback
     @user = User.find_or_create_for_oauth(request.env['omniauth.auth'])
 
-    return unless @user.persisted?
-
     flash['notice'] = t('logged_in')
     sign_in_and_redirect @user
   end
