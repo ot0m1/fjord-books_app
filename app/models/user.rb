@@ -7,14 +7,11 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable,
          :omniauthable, omniauth_providers: [:github]
 
-  def self.find_or_create_for_oauth(auth)
-    find_or_create_by(email: auth.info.email) do |user|
+  def self.from_omniauth(auth)
+    where(provider: auth.provider, email: auth.info.email).first_or_create do |user|
       user.provider = auth.provider
-      user.id = auth.uid
-      user.name = auth.info.name
       user.email = auth.info.email
-      password = Devise.friendly_token[0..5]
-      user.password = password
+      user.password = Devise.friendly_token[0..5]
     end
   end
 end
