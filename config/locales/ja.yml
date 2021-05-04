@@ -1,6 +1,7 @@
 ---
 ja:
-  logged_in: "ログインしました。"
+  logged_in: ログインしました。
+  If_you_would_like_to_change_your_password_as_well,_please_enter_your_current_password: もしパスワードも変更したい場合は現在のパスワードを入力してください
   activerecord:
     errors:
       messages:
