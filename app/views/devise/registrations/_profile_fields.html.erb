@@ -17,3 +17,13 @@
   <%= f.label :self_introduction %>
   <%= f.text_area :self_introduction %>
 </div>
+
+<div class="field">
+  <%= f.label :icon %>
+  <% if @user.icon.attached? %>
+    <%= image_tag @user.icon.variant(resize_to_fill: [120, 120]) %><br>
+  <% else %>
+    &nbsp;
+  <% end %>
+  <%= f.file_field :icon %>
+</div>

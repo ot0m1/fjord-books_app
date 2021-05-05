@@ -3,6 +3,14 @@
 class Users::RegistrationsController < Devise::RegistrationsController
   protected
 
+  def sign_up_params
+    params.require(:user).permit(:email, :name, :postal_code, :address, :self_introduction, :password, :password_confirmation, :current_password, :icon)
+  end
+
+  def account_update_params
+    params.require(:user).permit(:email, :name, :postal_code, :address, :self_introduction, :password, :password_confirmation, :current_password, :icon)
+  end
+
   # Override
   def update_resource(resource, params)
     if params[:password].blank?
