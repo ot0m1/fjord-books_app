@@ -14,7 +14,11 @@
   <strong><%= t(@title) %>:</strong><br>
     <% if @users.any? %>
       <% @users.each do |user| %>
-        <%= link_to user.name, user %>
+        <% if user.name.empty? %>
+          <%= link_to user.email, user %>
+        <% else %>
+          <%= link_to user.name, user %>
+        <% end %>
       <% end %>
     <% end %>
 </p>
