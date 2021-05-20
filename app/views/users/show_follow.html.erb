@@ -1,4 +1,4 @@
-<h1><%= @title %></h1>
+<h1><%= t(@title) %></h1>
 
 <p>
   <strong><%= User.human_attribute_name(:email) %>:</strong>
@@ -11,12 +11,11 @@
 </p>
 
 <p>
-  <strong><%= @title %>:</strong>
+  <strong><%= t(@title) %>:</strong><br>
     <% if @users.any? %>
       <% @users.each do |user| %>
         <%= link_to user.name, user %>
       <% end %>
-      <%# will_paginate %>
     <% end %>
 </p>
 
