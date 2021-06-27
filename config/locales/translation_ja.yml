@@ -2,7 +2,7 @@ ja:
   activerecord:
     models:
       book: 本  #g
-
+      report: 日報 #g
     attributes:
       book:
         author: 著者  #g

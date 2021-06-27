@@ -250,6 +250,10 @@ ja:
       notice: "フォローしました。"
     destroy:
       notice: "フォロー解除しました。"
+  reports:
+    report: 日報
+    new: 日報作成
+    No report yet: 日報はまだありません
   # devise-i18n-viewsをオーバーライド
   devise:
     registrations:
