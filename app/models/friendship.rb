@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class FollowRelationship < ApplicationRecord
+class Friendship < ApplicationRecord
   belongs_to :follower, class_name: 'User'
   belongs_to :followed, class_name: 'User'
   validates :follower_id, presence: true
