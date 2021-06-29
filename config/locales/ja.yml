@@ -1,5 +1,11 @@
 ---
 ja:
+  following: フォロー中
+  followers: フォロワー
+  following list: フォロー中一覧
+  followers list: フォロワー一覧
+  Follow: フォロー
+  Unfollow: フォロー解除
   activerecord:
     errors:
       messages:
