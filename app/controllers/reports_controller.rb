@@ -21,7 +21,7 @@ class ReportsController < ApplicationController
       if @report.save
         format.html { redirect_to @user, notice: t('controllers.common.notice_create', name: Report.model_name.human) }
       else
-        format.html { redirect_to @user, notice: t('errors.template.header.one', name: Report.model_name.human) }
+        format.html { redirect_to new_report_path, notice: t('controllers.common.Title and Subject are required', name: Report.model_name.human) }
       end
     end
   end
@@ -33,7 +33,7 @@ class ReportsController < ApplicationController
       if @report.update(report_params)
         format.html { redirect_to @report, notice: t('controllers.common.notice_update', name: Report.model_name.human) }
       else
-        format.html { redirect_to @user, notice: t('errors.template.header.one', name: Report.model_name.human) }
+        format.html { redirect_to edit_report_path, notice: t('controllers.common.Title and Subject are required', name: Report.model_name.human) }
       end
     end
   end
