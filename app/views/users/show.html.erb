@@ -63,7 +63,7 @@
     <tbody>
       <% @reports.each do |report| %>
         <tr>
-          <td><li><%= link_to report.title, report %> | <%= report.created_at.strftime("%Y-%m-%d") %></li></td>
+          <td><li><%= report.created_at.strftime("%Y-%m-%d") %> | <%= link_to report.title, report %></li></td>
           <% if current_user == @user %>
             <td><%= link_to t('views.common.edit'), edit_report_path(report) %></td>
             <td><%= link_to t('views.common.destroy'), report, method: :delete, data: { confirm: t('views.common.delete_confirm') } %></td>

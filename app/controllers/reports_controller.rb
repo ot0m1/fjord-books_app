@@ -1,7 +1,7 @@
 class ReportsController < ApplicationController
   def show
     @report = Report.find(params[:id])
-    @user = current_user
+    @user = @report.user
   end
 
   def new
@@ -11,6 +11,12 @@ class ReportsController < ApplicationController
 
   def edit
     @report = Report.find(params[:id])
+
+    if current_user.id == @report.user_id
+      render :edit
+    else
+      redirect_to books_path
+    end
   end
 
   def create
@@ -29,12 +35,16 @@ class ReportsController < ApplicationController
   def update
     @report = Report.find(params[:id])
 
-    respond_to do |format|
-      if @report.update(report_params)
-        format.html { redirect_to @report, notice: t('controllers.common.notice_update', name: Report.model_name.human) }
-      else
-        format.html { redirect_to edit_report_path, notice: t('controllers.common.Title and Subject are required', name: Report.model_name.human) }
+    if current_user.id == @report.user_id
+      respond_to do |format|
+        if @report.update(report_params)
+          format.html { redirect_to @report, notice: t('controllers.common.notice_update', name: Report.model_name.human) }
+        else
+          format.html { redirect_to edit_report_path, notice: t('controllers.common.Title and Subject are required', name: Report.model_name.human) }
+        end
       end
+    else
+      redirect_to books_path
     end
   end
 
@@ -42,12 +52,16 @@ class ReportsController < ApplicationController
     @user = current_user
     @report = Report.find(params[:id])
 
-    respond_to do |format|
-      if @report.destroy
-        format.html { redirect_to @user, notice: t('controllers.common.notice_destroy', name: Report.model_name.human) }
-      else
-        format.html { redirect_to @user, notice: t('errors.template.header.one', name: Report.model_name.human) }
+    if @user.id == @report.user_id
+      respond_to do |format|
+        if @report.destroy
+          format.html { redirect_to @user, notice: t('controllers.common.notice_destroy', name: Report.model_name.human) }
+        else
+          format.html { redirect_to @user, notice: t('errors.template.header.one', name: Report.model_name.human) }
+        end
       end
+    else
+      redirect_to books_path
     end
   end
 
