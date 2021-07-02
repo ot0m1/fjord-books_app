@@ -245,11 +245,16 @@ ja:
       notice_create: "%{name}が作成されました。"
       notice_update: "%{name}が更新されました。"
       notice_destroy: "%{name}が削除されました。"
+      Title and Subject are required: タイトルと件名の入力は必須です
   relationships:
     create:
       notice: "フォローしました。"
     destroy:
       notice: "フォロー解除しました。"
+  reports:
+    report: 日報
+    new: 日報作成
+    No report yet: 日報はまだありません
   # devise-i18n-viewsをオーバーライド
   devise:
     registrations:
